@@ -22,6 +22,7 @@ int main(){
 
 	switch (selector){
 	case 1:
+		
 
 	default:
 		break;
