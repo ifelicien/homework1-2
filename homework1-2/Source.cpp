@@ -10,22 +10,30 @@ int main(){
 	cout << "Please enter your second number: ";
 	cin >> inputTwo;
 
-	cout << "please select the operation: " << endl;
+	cout << "\nplease select the operation: " << endl;
 	cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _" << endl;
 
-	cout << "Enter 1 for Integer Division" << endl;
+	cout << "\nEnter 1 for Integer Division" << endl;
 	cout << "Enter 2 for Floating-point Division" << endl;
 	cout << "Enter 3 for modulo " << endl;
 
-	cout << "Enter your selection: ";
+	start:
+	cout << "\nEnter your selection: ";
 	cin >> selector;
 
 	switch (selector){
 	case 1:
-		
-
-	default:
+		cout << "\n\n" << inputOne << " / " << inputTwo << " using integer division is: " << inputOne/inputTwo << endl;
 		break;
+	case 2:
+		cout << "\n\n" << inputOne << " / " << inputTwo << " using integer division is: " << (double)inputOne/(double)inputTwo << endl;
+		break;
+	case 3:
+		cout << "\n\n" << inputOne << " % " << inputTwo << " using integer division is: " << inputOne%inputTwo << endl;
+		break;
+	default:
+		cout << "incorrect input";
+		goto start;
 	}
 
 	return 0;
